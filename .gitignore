@@ -20,6 +20,17 @@ var/
 *.egg
 .env
 
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/
+staticfiles/
+*.pot
+*.mo
+
 # Node
 node_modules/
 npm-debug.log*
@@ -43,5 +54,25 @@ src/apps/frontend/build/
 src/apps/frontend/.next/
 src/apps/frontend/out/
 
+# Backend
+apps/backend/media/
+apps/backend/static/
+apps/backend/staticfiles/
+apps/backend/logs/
+apps/backend/.coverage
+apps/backend/htmlcov/
+apps/backend/celerybeat-schedule
+apps/backend/celerybeat.pid
+apps/backend/.venv/
+apps/backend/*/migrations/*.py
+!apps/backend/*/migrations/__init__.py
+
 # Turborepo
 .turbo/
+turbo_modules/
+
+# scripts
+task-log/
+instructions.md
+.cursorrules
+tree.md
