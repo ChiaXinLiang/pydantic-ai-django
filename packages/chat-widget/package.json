@@ -1,0 +1,28 @@
+{
+  "name": "@repo/chat-widget",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.tsx --format cjs,esm --dts --external react",
+    "dev": "tsup src/index.tsx --format cjs,esm --dts --external react --watch",
+    "clean": "rm -rf dist node_modules",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "@repo/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.3.3",
+    "tsup": "^8.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "15.0.4"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }}
